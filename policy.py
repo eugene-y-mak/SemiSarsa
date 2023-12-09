@@ -10,7 +10,7 @@ class Policy:  # Given state, return action
     """
     Chooses best action that maximizes q function
     """
-    def __getitem__(self, state):  # uses Epsilon greedy
+    def __getitem__(self, state) -> int:  # uses Epsilon greedy
         best_action = None
         roll_dice = np.random.rand()
         if roll_dice < self.epsilon:

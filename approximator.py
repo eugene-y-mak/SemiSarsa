@@ -12,10 +12,10 @@ class Approximator:
         else:
             self.weight_dimension = self.state_space_size
         for action in range(env.action_space.n):
-            # if random_init:
-            #     self.action_to_weights[action] = np.random.rand(self.weight_dimension)
-            # else:
-            self.action_to_weights[action] = np.zeros(self.weight_dimension)
+            if random_init:
+                self.action_to_weights[action] = np.random.rand(self.weight_dimension)
+            else:
+                self.action_to_weights[action] = np.zeros(self.weight_dimension)
 
     """
     Approximator function. Given state and action, return action-value 
