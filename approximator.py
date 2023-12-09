@@ -8,7 +8,7 @@ class Approximator:
         self.state_space_size = len(state)
         self.weight_dimension = self.state_space_size + 1  # + 1 for bias term
         for action in range(env.action_space.n):
-            self.action_to_weights[action] = np.zeros(self.weight_dimension)
+            self.action_to_weights[action] = np.random.rand(self.weight_dimension)
 
     """
     Approximator function. Given state and action, return action-value 
