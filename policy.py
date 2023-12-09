@@ -14,7 +14,6 @@ class Policy:  # Given state, return action
         best_action = None
         roll_dice = np.random.rand()
         if roll_dice < self.epsilon:
-            random_action = self.env.action_space.sample()
             return self.env.action_space.sample()
         best_action_value = -np.inf
         for action in range(self.env.action_space.n):

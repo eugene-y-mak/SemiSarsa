@@ -1,6 +1,6 @@
 import gymnasium as gym
 from semi_sarsa import SemiSarsa
-env = gym.make("CartPole-v1") # , render_mode='human'
+env = gym.make("CartPole-v1", render_mode='human')
 
 # Get number of actions from gym action space
 # noinspection PyUnresolvedReferences
